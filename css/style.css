@@ -1,0 +1,169 @@
+:root {
+    --navbar-height: 15rem;
+}
+
+html {
+    font-size: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    line-height: 1.6;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    cursor: pointer;
+}
+
+p {
+    margin-bottom: .75rem;
+}
+
+pre {
+    margin: 0.75rem 0;
+}
+
+h3 {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 1.75rem 0 1rem 0;
+    font-weight: 700;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* NavBar */
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-right: 2px #777 solid;
+    background-color: #aaa;
+    z-index: 2;
+    color: #fff;
+    font-weight: 700;
+}
+
+#navbar h1 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: .25rem .25rem;
+    font-weight: 700;
+}
+
+#navbar>ul {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar>ul>li {
+    padding: 1.25rem;
+}
+
+
+/* Main */
+
+#main-doc {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 4rem;
+    padding: 0rem 2rem;
+}
+
+#main-doc>.main-section>header {
+    font-weight: 700;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: .25rem;
+}
+
+#main-doc .main-section {
+    padding-top: 10rem;
+}
+
+#main-doc ul {
+    padding-left: 2rem;
+}
+
+code {
+    display: block;
+    text-align: left;
+}
+
+
+/* Smallest screen */
+
+@media (min-width: 300px) {}
+
+
+/* Small screens   */
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+    #navbar {
+        width: 25%;
+        right: unset;
+        bottom: 0;
+    }
+    #navbar,
+    #navbar>ul {
+        flex-direction: column;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #navbar>ul>*:not(:last-child) {
+        border-bottom: 1px #333 solid;
+        width: 100%;
+    }
+    #main-doc {
+        width: 75%;
+        padding-top: 1rem;
+        top: 0;
+        right: 0;
+        left: unset;
+    }
+    #main-doc .main-section {
+        padding-top: 3rem;
+    }
+    #main-doc :nth-child(1) {
+        padding-top: 0 !important;
+    }
+}
+
+
+/* medium screens */
+
+@media (min-width: 992px) {}
+
+
+/* Big screens  */
+
+@media (min-width: 1200px) {}
